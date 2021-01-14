@@ -1,0 +1,26 @@
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 206px;
+}
+
+.social-links a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    box-shadow: none;
+    border-radius: 50%;
+    fill: $svg-icon;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-links a:hover {
+    background-color: $elements;
+    fill: $lite-bg;
+}
+
+.social-link {
+    width: 20px;
+    height: 20px;
+    margin: 12px;
+}

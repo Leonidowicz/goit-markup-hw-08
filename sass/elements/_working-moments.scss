@@ -1,0 +1,39 @@
+.working-moments ul {
+    margin-top: 50px;
+    margin-bottom: 94px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.working-moments h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.working-moments-item {
+    position: relative;
+}
+
+.working-moments-item-description {
+    position: absolute;
+    bottom: 0px;
+
+    height: 70px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $lite-bg;
+    background-color: $lable-background;
+}

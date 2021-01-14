@@ -1,0 +1,40 @@
+.visuallyhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+h2,
+h3 {
+    color: $title;
+}
+
+/* * {
+  outline: 1px solid black;
+} */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: $lite-bg;
+    /* font-family: 'Oleo Script', cursive; */
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+}
+
+.hero,
+footer {
+    background: $dark-bg;
+    color: $lite-bg;
+}
