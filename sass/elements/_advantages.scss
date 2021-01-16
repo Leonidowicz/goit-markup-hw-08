@@ -1,38 +1,51 @@
 .advantages {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .advantages ul {
+  @media screen and(min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
 }
 
 .advantages li {
-    max-width: 270px;
+  width: 100%;
+  @media screen and(min-width: 768px) {
+    width: calc((100% / 2) - 15px);
+  }
+  @media screen and(min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .advantages h3 {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .advantages p {
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .advantages-icon {
-    width: 270px;
-    height: 120px;
-    padding: 25px 100px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background: $midl-bg;
+  width: 100%;
+  height: 120px;
+
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+  background: $midl-bg;
 }
