@@ -67,11 +67,6 @@ header {
     }
 }
 
-nav {
-    //   display: flex;
-    //   align-items: center;
-}
-
 .nav-menu {
     @media screen and (max-width: 767px) {
         position: absolute;
@@ -109,10 +104,6 @@ nav {
 
 }
 
-
-
-
-
 .nav-items {
     display: flex;
     align-items: center;
@@ -137,7 +128,6 @@ nav {
     }
 }
 
-
 .nav-item {
     position: relative;
 
@@ -155,11 +145,6 @@ nav {
         font-size: 14px;
         line-height: 1.14;
     }
-
-    // margin-right: 50px;
-    // height: 80px;
-    //   display: flex;
-    //   align-items: center;
 }
 
 .nav-item:hover,
@@ -188,7 +173,7 @@ nav {
     border-radius: 2px;
 }
 
-/* ------------------------------nav contact */
+/* -----------------------------nav contact */
 
 .contacts {
     display: flex;
