@@ -1,110 +1,196 @@
 header {
     border-bottom: 1px solid #ececec;
-    /* height: 80px; */
+    position: relative;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.nav-menu {
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        left: 0;
+        top: 100%;
+
+        width: 100%;
+
+        padding: 60px 0;
+
+        display: none;
+
+        &.is-open {
+            display: flex;
+        }
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        border-top: 1px solid #ececec;
+
+        background-color: $lite-bg;
+    }
 }
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .icon-cross {
+        display: none;
+    }
+
+    &.is-open .icon-cross {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
+
+
 
 .logo {
-    margin-top: 24px;
-    margin-right: 93px;
-    margin-bottom: 25px;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: auto;
+
+    //   margin-top: 24px;
+    //   margin-right: 93px;
+    //   margin-bottom: 25px;
 
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     color: $elements;
+
+    //   font-size: 26px;
+    //   line-height: 1.2;
 }
 
 nav {
-    display: flex;
-    align-items: center;
+    //   display: flex;
+    //   align-items: center;
 }
 
-nav .logo span {
+.logo span {
     color: #000000;
 }
 
-.nav-items a::before {
-    background-image: url(../images/svg/symbol-defs.svg#smartphone);
-}
-
 .nav-items {
-    display: flex;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
 }
 
-.nav-item:link {
-    color: $title;
-}
+// .nav-item:link {
+//     color: $title;
+// }
 
 .nav-item {
     display: block;
-    /* margin-right: 50px; */
-    color: $title;
+
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
+    color: $title;
+
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // link {
+    //     color: $title;
+    // }
 }
+
 
 .nav-item:hover,
 .nav-item:focus,
 .nav-item.current,
-.nav-contact:hover {
+.nav-contact:hover,
+.menu-button:hover,
+.menu-button:focus {
     color: $elements;
-    /* transition-property: scale; */
+    fill: $elements;
 }
 
-/* .nav-item:hover,
-.nav-contact:hover {
-  transform: scale(1.1);
-} */
-
 .nav-items li {
+    @media screen and (max-width: 767px) {
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+    }
+
     position: relative;
-    margin-right: 50px;
-    height: 80px;
-    display: flex;
-    align-items: center;
+    // margin-right: 50px;
+    // height: 80px;
+    //   display: flex;
+    //   align-items: center;
 }
 
 .nav-item.current::after {
     position: absolute;
-    bottom: -1px;
-    /* width: calc(100% - 50px); */
+
+    @media screen and (max-width:767px) {
+        bottom: -8px;
+    }
+
+    // bottom: -1px;
     content: '';
     display: block;
     width: 100%;
     height: 4px;
     background-color: currentColor;
     border-radius: 2px;
-    /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* ------------------------------nav contact */
 
 .contacts {
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 60px;
+    }
+
+    // margin-left: auto;
 }
 
 .contacts li {
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
+    @media screen and (max-width: 767px) {
+        &:first-child {
+            margin-bottom: 16px;
+        }
+    }
+
+    // margin-left: 50px;
+    //   display: flex;
+    //   align-items: center;
 }
 
 .nav-contact {
+
     display: flex;
     align-items: center;
     color: $text;
@@ -116,16 +202,7 @@ nav .logo span {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: currentColor;
-}
-
-.tel {
-    width: 10px;
-    height: 16px;
+.nav-contact-icon {
     margin-right: 10px;
     fill: currentColor;
 }
