@@ -13,15 +13,20 @@
 
 .advantages li {
   width: 100%;
+
   @media screen and(min-width: 768px) {
     width: calc((100% / 2) - 15px);
   }
+
   @media screen and(min-width: 1200px) {
     width: 270px;
   }
 }
 
 .advantages h3 {
+  margin-bottom: 10px;
+
+  text-align: left;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -30,7 +35,6 @@
 }
 
 .advantages p {
-  margin-top: 10px;
   margin-bottom: 30px;
 
   font-weight: 400;
