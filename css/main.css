@@ -982,8 +982,13 @@ header .container {
 
 .our-team {
   background-color: #f5f4fa;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team {
+    padding: 94px 0;
+  }
 }
 
 .our-team h2 {
@@ -993,6 +998,13 @@ header .container {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team h2 {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .our-team .cards-team {
@@ -1052,7 +1064,7 @@ header .container {
 }
 
 .our-team p {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   text-align: center;
   font-weight: 400;
   font-size: 16px;
@@ -1063,6 +1075,12 @@ header .container {
 
 .our-team .social-links {
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team .social-links {
+    margin-bottom: 30px;
+  }
 }
 
 .regular-customers h2 {
