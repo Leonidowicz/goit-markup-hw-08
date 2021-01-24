@@ -1172,21 +1172,27 @@ header .logo {
 }
 
 .our-works {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
 }
 
 .our-works .sorter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
-.sorter li:not(:last-child) {
+.our-works .sorter li:not(:last-child) {
   margin-right: 8px;
 }
 
-.sorter button {
+@media screen and (max-width: 767px) {
+  .our-works .sorter li:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
+}
+
+.our-works .sorter button {
   padding: 6px 22px;
   border: 0px;
   border-radius: 4px;
@@ -1194,34 +1200,49 @@ header .logo {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sorter button:hover,
-.sorter button:focus {
+.our-works .sorter button:hover, .our-works .sorter button:focus {
   background-color: #2196f3;
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-.our-works .card-items {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .card-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
-.card-item > a {
-  width: 370px;
+.card-item {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .card-item {
+    width: calc((100% - 30px) / 2);
+  }
+  .card-item:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
 .overlay-container {
-  width: inherit;
   position: relative;
+  width: inherit;
   overflow: hidden;
 }
 
 .blue-overlay {
   position: absolute;
-  padding: 63px 24px;
-  width: inherit;
-  height: 294px;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 24px;
+  height: 100%;
+  vertical-align: middle;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -1243,10 +1264,14 @@ header .logo {
 }
 
 .card {
+  padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  padding: 20px 24px;
+}
+
+.card:nth-child(2) {
+  padding-right: 0px;
 }
 
 .card-item:hover .card,
@@ -1255,20 +1280,12 @@ header .logo {
   padding: 20px 25px;
 }
 
-.our-works .card-items li {
-  margin-right: 30px;
+.card-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.our-works .card-items li:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.our-works .card-items li:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-
 .card-items h2 {
+  text-align: left;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
