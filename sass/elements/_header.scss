@@ -7,21 +7,23 @@ header {
         align-items: center;
         justify-content: space-between;
     }
+
+    & .logo {
+        height: 60px;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width:768px) {
+            height: 80px;
+        }
+    }
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-
-    margin-right: auto;
-    height: 60px;
-
-    @media screen and (min-width:768px) {
-        height: 80px;
-    }
 
     font-family: 'Raleway',
-    sans-serif;
+        sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.16;
@@ -32,7 +34,6 @@ header {
         font-size: 26px;
         line-height: 1.2;
     }
-
 
     & span {
         color: #000000;

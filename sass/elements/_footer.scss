@@ -1,54 +1,119 @@
 footer {
-    height: 252px;
-}
+    padding: 60px 0;
 
-footer .container {
-    display: flex;
-    align-content: center;
-}
+    & .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
-.adres {
-    margin-top: 60px;
-    margin-right: 70px;
-}
+        @media screen and (min-width:768px) {
+            display: block;
+        }
 
-footer .logo {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
+        @media screen and (min-width:1200px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
 
-footer .logo span {
-    color: $lite-bg;
+    & .footer-contact {
+        @media screen and (min-width:768px) and (max-width:1199px) {
+
+            display: flex;
+            justify-content: space-between;
+
+            margin-left: 100px;
+            margin-bottom: 60px;
+            margin-right: 74px;
+        }
+
+        @media screen and (min-width:1200px) {
+            display: flex;
+
+        }
+
+    }
+
+    & .adres {
+        text-align: center;
+
+        @media screen and (min-width:1200px) {
+            text-align: left;
+            margin-right: 70px;
+            display: inline-block;
+        }
+    }
+
+    & .logo {
+        margin-bottom: 20px;
+    }
+
+    & .logo span {
+        color: $lite-bg;
+    }
 }
 
 address {
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
+
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    & p {
+        margin-bottom: 8px;
+    }
+
+    & ul li:first-child {
+        margin-bottom: 8px;
+    }
+
+    & a {
+
+        display: block;
+        font-style: normal;
+        color: $foter-gray;
+    }
 }
 
-address a {
-    margin-top: 9px;
-    display: block;
-    font-style: normal;
-    color: $foter-gray;
-}
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.footer-social h2 {
-    margin-top: 72px;
-    margin-bottom: 20px;
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+    }
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    @media screen and (min-width:768px) {
+        margin-top: 5px;
+    }
 
-    color: $lite-bg;
+    @media screen and (min-width:1200px) {
+        display: inline-flex;
+        margin-top: 12px;
+        margin-right: 70px;
+        align-items: flex-start;
+    }
+
+    & h2 {
+        margin-bottom: 20px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        color: $lite-bg;
+    }
 }
 
 .social-links a {
@@ -60,12 +125,28 @@ address a {
 }
 
 .subscribe {
-    margin-top: 72px;
-    margin-left: 93px;
+    width: 100%;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-top: 12px;
+        width: 570px;
+    }
 }
 
 .subscribe__title {
     margin-bottom: 20px;
+
+    @media screen and (min-width:1200px) {
+        text-align: left;
+    }
+
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -75,11 +156,26 @@ address a {
     color: $lite-bg;
 }
 
+.subscribe__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width:1200px) {
+        flex-direction: row;
+    }
+
+}
+
 .subscribe__input {
-    width: 358px;
-    height: 50px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding-left: 16px;
+
+
+
+
+    width: 100%;
+    height: 50px;
 
     font-size: 16px;
     line-height: 1.25;
@@ -92,6 +188,12 @@ address a {
     border-radius: 4px;
 
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width:1200px) {
+        margin-right: 12px;
+        margin-bottom: 0px;
+        width: 358px;
+    }
 }
 
 .subscribe__input:focus {
@@ -99,12 +201,6 @@ address a {
     outline-offset: -4px;
 }
 
-.subscribe__form {
-    display: flex;
-}
-
 .subscribe__button--svg {
     margin-left: 10px;
-    width: 24px;
-    height: 24px;
 }
