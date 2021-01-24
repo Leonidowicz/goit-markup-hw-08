@@ -24,14 +24,16 @@ h3 {
 }
 
 body {
-  background-color: $lite-bg;
-
   font-family: 'Roboto', sans-serif;
   color: var(--text);
+
+  background-color: $lite-bg;
 }
 
 .hero,
 footer {
+
   background: $dark-bg;
   color: $lite-bg;
+
 }
