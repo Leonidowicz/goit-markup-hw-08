@@ -1175,11 +1175,24 @@ header .logo {
   padding: 60px 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .our-works {
+    padding: 94px 0;
+  }
+}
+
 .our-works .sorter {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-works .sorter {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .our-works .sorter li:not(:last-child) {
@@ -1215,6 +1228,34 @@ header .logo {
   }
 }
 
+.card-items .card {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-items .card:nth-child(2) {
+  padding-right: 0px;
+}
+
+.card-items h2 {
+  text-align: left;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card-items .card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
 .card-item {
   width: 100%;
 }
@@ -1246,6 +1287,22 @@ header .logo {
   }
 }
 
+.card-item:hover, .card-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-item:hover .card,
+.card-item:focus .card {
+  border: none;
+  padding: 20px 25px;
+}
+
+.card-item:hover .blue-overlay,
+.card-item:focus .blue-overlay {
+  transform: translateY(-100%);
+}
+
 .overlay-container {
   position: relative;
   width: inherit;
@@ -1268,51 +1325,6 @@ header .logo {
   background-color: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-item:hover .blue-overlay,
-.card-item:focus .blue-overlay {
-  transform: translateY(-100%);
-}
-
-.card-item:hover,
-.card-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card {
-  padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.card:nth-child(2) {
-  padding-right: 0px;
-}
-
-.card-item:hover .card,
-.card-item:focus .card {
-  border: none;
-  padding: 20px 25px;
-}
-
-.card-items h2 {
-  text-align: left;
-  margin-bottom: 4px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.card-items .card-description {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: #757575;
 }
 
 .contact {

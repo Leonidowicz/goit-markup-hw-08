@@ -1,19 +1,21 @@
 .our-works {
     padding: 60px 0;
-    // padding-top: 94px;
-    // padding-bottom: 94px;
 
+    @media screen and (min-width:1200px) {
+        padding: 94px 0;
+    }
 
     & .sorter {
         display: flex;
         justify-content: flex-start;
-        // justify-content: center;
         flex-wrap: wrap;
 
-        // width: 362px;
         margin-bottom: 40px;
-        // margin-bottom: 50px;
 
+        @media screen and (min-width:1200px) {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
 
         & li:not(:last-child) {
             margin-right: 8px;
@@ -26,15 +28,12 @@
         }
 
 
-
-
         & button {
             padding: 6px 22px;
             border: 0px;
             border-radius: 4px;
             background-color: $midl-bg;
             transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 
             &:hover,
             &:focus {
@@ -56,7 +55,38 @@
         flex-wrap: wrap;
         align-items: center;
     }
+
+    & .card {
+        padding: 20px 24px;
+
+        border-right: 1px solid $border-color;
+        border-left: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+
+        &:nth-child(2) {
+            padding-right: 0px;
+        }
+    }
+
+    & h2 {
+        text-align: left;
+
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+
+    & .card-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.03em;
+        color: $text;
+    }
 }
+
 
 .card-item {
     width: 100%;
@@ -88,23 +118,36 @@
         }
     }
 
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover .card,
+    &:focus .card {
+        border: none;
+        padding: 20px 25px;
+    }
+
+    &:hover .blue-overlay,
+    &:focus .blue-overlay {
+        transform: translateY(-100%);
+    }
 
 
 }
 
-// .card-item>a {
-//     width: 100%;
-// }
 
 .overlay-container {
     position: relative;
-
-
 
     width: inherit;
 
     overflow: hidden;
 }
+
 
 .blue-overlay {
     position: absolute;
@@ -128,53 +171,4 @@
     color: $lite-bg;
 
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-item:hover .blue-overlay,
-.card-item:focus .blue-overlay {
-    transform: translateY(-100%);
-}
-
-.card-item:hover,
-.card-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card {
-    padding: 20px 24px;
-
-
-    border-right: 1px solid $border-color;
-    border-left: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-
-    &:nth-child(2) {
-        padding-right: 0px;
-    }
-}
-
-.card-item:hover .card,
-.card-item:focus .card {
-    border: none;
-    padding: 20px 25px;
-}
-
-.card-items h2 {
-    text-align: left;
-
-    margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-}
-
-.card-items .card-description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-    color: $text;
 }
