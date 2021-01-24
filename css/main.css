@@ -1083,10 +1083,6 @@ header .logo {
   }
 }
 
-.our-team img {
-  margin-bottom: 30px;
-}
-
 .our-team h3 {
   margin-bottom: 10px;
   font-weight: 500;
@@ -1114,6 +1110,11 @@ header .logo {
   .our-team .social-links {
     margin-bottom: 30px;
   }
+}
+
+.img-team {
+  margin-bottom: 30px;
+  display: block;
 }
 
 .regular-customers {

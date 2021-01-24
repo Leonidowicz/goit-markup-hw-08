@@ -66,9 +66,7 @@
     border-radius: 0px 0px 4px 4px;
   }
 
-  & img {
-    margin-bottom: 30px;
-  }
+
 
   & h3 {
     margin-bottom: 10px;
@@ -98,4 +96,9 @@
       margin-bottom: 30px;
     }
   }
+}
+
+.img-team {
+  margin-bottom: 30px;
+  display: block;
 }
