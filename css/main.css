@@ -1219,12 +1219,30 @@ header .logo {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
+  .card-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-item {
     width: calc((100% - 30px) / 2);
   }
   .card-item:nth-child(odd) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-item {
+    width: calc((100% - 60px) / 3);
+  }
+  .card-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .card-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1278,10 +1296,6 @@ header .logo {
 .card-item:focus .card {
   border: none;
   padding: 20px 25px;
-}
-
-.card-item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .card-items h2 {
