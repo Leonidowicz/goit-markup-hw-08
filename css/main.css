@@ -1026,7 +1026,9 @@ header .logo {
 
 .our-team .img-team {
   margin-bottom: 30px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .our-team h2 {
@@ -1046,7 +1048,6 @@ header .logo {
 }
 
 .our-team .cards-team {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1087,6 +1088,11 @@ header .logo {
   .our-team .card-team {
     width: calc((100% - 90px) / 4);
   }
+}
+
+.our-team .overflow {
+  width: 100%;
+  overflow: hidden;
 }
 
 .our-team h3 {
