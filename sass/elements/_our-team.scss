@@ -1,4 +1,5 @@
 .our-team {
+
   background-color: $midl-bg;
   padding: 60px 0;
 
@@ -6,7 +7,10 @@
     padding: 94px 0;
   }
 
-
+  .img-team {
+    margin-bottom: 30px;
+    display: block;
+  }
 
   & h2 {
     margin-bottom: 30px;
@@ -24,6 +28,8 @@
   }
 
   & .cards-team {
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,10 +38,10 @@
       flex-direction: row;
       flex-wrap: wrap;
     }
-
   }
 
   & .card-team {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,9 +102,4 @@
       margin-bottom: 30px;
     }
   }
-}
-
-.img-team {
-  margin-bottom: 30px;
-  display: block;
 }

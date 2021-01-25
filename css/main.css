@@ -1024,6 +1024,11 @@ header .logo {
   }
 }
 
+.our-team .img-team {
+  margin-bottom: 30px;
+  display: block;
+}
+
 .our-team h2 {
   margin-bottom: 30px;
   font-weight: 700;
@@ -1041,6 +1046,7 @@ header .logo {
 }
 
 .our-team .cards-team {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1110,11 +1116,6 @@ header .logo {
   .our-team .social-links {
     margin-bottom: 30px;
   }
-}
-
-.img-team {
-  margin-bottom: 30px;
-  display: block;
 }
 
 .regular-customers {
@@ -1251,6 +1252,12 @@ header .logo {
   border-radius: 4px;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 768px) {
   .card-items {
     display: flex;
@@ -1326,7 +1333,6 @@ header .logo {
 .card-item:hover .card,
 .card-item:focus .card {
   border: none;
-  padding: 20px 25px;
 }
 
 .card-item:hover .blue-overlay,
